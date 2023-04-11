@@ -5,7 +5,10 @@ const NavContainer = styled.nav`
     align-items:center;
     padding: 1rem 2rem;
     height: 128px;
+    background-color: black;
+    color: white;
     h1{
+        font-weight: bold;
         margin-right: auto;
     }
 `;

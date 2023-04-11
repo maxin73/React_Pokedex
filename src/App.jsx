@@ -9,10 +9,11 @@ import {
   } from 'reactstrap';
 import './App.css'
 
+
 function App() {
   const [allPokemons, setAllPokemons] = useState([])
   const [allSpecies, setAllSpecies] = useState([]);
-  const [loadMore, setLoadMore] = useState('https://pokeapi.co/api/v2/pokemon?limit=10')
+  const [loadMore, setLoadMore] = useState('https://pokeapi.co/api/v2/pokemon?limit=20')
   const [allData, setAllData] = useState([]);
 
   const getAllPokemons = async () => {
@@ -71,14 +72,13 @@ function App() {
         grid-template-columns: repeat(1, 1fr);
       };
     `;
+    const CenteredButton = styled(Button)`
+      display: block;
+      margin: 2rem auto;
+    `;
     
-  //   const CenteredButton = styled(Button)`
-  //   display: block;
-  //   margin: 0 auto;
-  // `;
-  console.log(allSpecies);
   return (
-      <App>
+      <>
         <Nav />
           <ThumbnailGrid>
             {allData.map( (pokemonStats, index) =>
@@ -92,9 +92,9 @@ function App() {
               />
             )}
           </ThumbnailGrid>
-          <Button className="load-more" onClick={() => getAllPokemons()}>Load more</Button>
+          <CenteredButton className="load-more" onClick={() => getAllPokemons()}>Load more</CenteredButton>
         <Footer />
-      </App>
+      </>
   );
 }
 export default App
