@@ -4,6 +4,7 @@ import axios from "axios"
 import 'bootstrap/dist/css/bootstrap.min.css'
 import {
   Card,
+  Container,
   Modal, 
   ModalHeader, 
   ModalBody
@@ -22,27 +23,17 @@ const toggleModal = async () => {
   setModalOpen(!modalOpen);
 };
 
-const Wrapper = styled.div`
-    padding: 1rem;
-    @media screen and (min-width: 1280px) {
-      
-    };
-    @media screen and (min-width: 760px) {
-      
-    };
-    @media screen and (min-width: 480px) {
-      
-    };
-`;
 
 const cardStyle = {
-  width: '15rem',
   padding:'1rem',
   cursor: 'pointer'
 }
 
   return (
-    <Wrapper>
+    <Container
+      style={{
+        padding: '1rem'
+      }}>
       <Card 
         key={id}
         style={cardStyle}
@@ -69,7 +60,7 @@ const cardStyle = {
           <p>{speciesInfo?.flavor_text_entries[0]?.flavor_text}</p>
           </ModalBody>
         </Modal>
-    </Wrapper>
+    </Container>
   )
 }
 

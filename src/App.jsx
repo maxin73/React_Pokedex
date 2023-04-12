@@ -7,7 +7,6 @@ import PokemonThumbnail from "./components/PokemonThumbnail"
 import {
   Button
   } from 'reactstrap';
-import './App.css'
 
 
 function App() {
