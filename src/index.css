@@ -11,7 +11,9 @@
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
+  font-feature-settings: 'palt' 1;
   -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: 'palt' 1;
   -webkit-text-size-adjust: 100%;
 }
 
