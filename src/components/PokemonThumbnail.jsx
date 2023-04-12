@@ -48,7 +48,10 @@ const cardStyle = {
         <Modal isOpen={modalOpen} toggle={toggleModal}>
           <ModalHeader toggle={toggleModal}>{name}</ModalHeader>
           <ModalBody>
-          <div style={{textAlign: 'center'}}>
+          <div style={{
+            textAlign: 'center',
+            fontFeatureSettings:'"pkna" 1'
+            }}>
             <img src={image}
                   style={{
                     width: '13rem',
